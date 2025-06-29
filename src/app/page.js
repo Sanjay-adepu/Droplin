@@ -1,12 +1,8 @@
-// app/page.js
 import Link from 'next/link';
-
 
 export default function Home() {
   return (
     <>
-      
-
       <div className="px-4 py-12 max-w-3xl mx-auto text-center">
         <h1 className="text-3xl font-bold text-[#008edc] mb-8 leading-tight tracking-tight font-sans">
           Welcome to Droplin
@@ -15,7 +11,7 @@ export default function Home() {
         <div className="text-left space-y-6">
           <p className="text-gray-700">
             Droplin is a smart file-sharing platform built to seamlessly transfer files, text, and links between devices such as laptops and mobiles. 
-            Whether you're in a classroom, office, or working remotely, Droplin allows you to quickly upload your data and access it from any device via a 
+            Whether you&apos;re in a classroom, office, or working remotely, Droplin allows you to quickly upload your data and access it from any device via a 
             unique code or QR scanner.
           </p>
 
