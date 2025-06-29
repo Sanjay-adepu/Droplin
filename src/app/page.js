@@ -11,7 +11,7 @@ export default function Home() {
         <section className="text-left space-y-8 bg-white p-8 rounded-2xl shadow-xl">
           <p className="text-lg leading-relaxed text-gray-700">
             <strong>Droplin</strong> is a smart file-sharing platform built to seamlessly transfer files, text, and links between devices like laptops and mobiles.
-            Whether you're in a classroom, office, or working remotely, Droplin makes it effortless to upload and retrieve data using a unique code or QR scanner.
+            Whether you&apos;re in a classroom, office, or working remotely, Droplin makes it effortless to upload and retrieve data using a unique code or QR scanner.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-800">✨ Key Features</h2>
@@ -29,13 +29,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
             <Link
               href="/upload"
-              className="px-6 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition duration-200 shadow-md hover:shadow-lg"
+              className="px-6 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition duration-200 shadow-md hover:shadow-lg text-center"
             >
               Upload Files / Text / Link
             </Link>
             <Link
               href="/download"
-              className="px-6 py-3 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition duration-200 shadow-md hover:shadow-lg"
+              className="px-6 py-3 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition duration-200 shadow-md hover:shadow-lg text-center"
             >
               Download using Code / QR
             </Link>
