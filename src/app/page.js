@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import styles from './home.module.css';
-
+import Navbar from './Navbar.js';
 
 export default function Home() {
   return (
+<>
+<Navbar/>
     <main className={styles.main}>
      
      
@@ -41,5 +43,6 @@ export default function Home() {
         </section>
       </div>
     </main>
+</>
   );
 }
