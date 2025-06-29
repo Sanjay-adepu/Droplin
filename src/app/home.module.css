@@ -1,176 +1,131 @@
+/* home.module.css */
 
-/* Reset and base */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
 .main {
   min-height: 100vh;
-  padding: 2rem 1rem;
-  background: var(--bg-gradient);
-  font-family: var(--font-body);
-  color: var(--text-color);
-  overflow-x: hidden;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
 }
 
-/* Background Decorations */
-.backgroundImage {
-  position: absolute;
-  opacity: 0.15;
-  z-index: 0;
-}
-
-.bgLaptop {
-  top: 2rem;
-  left: 1rem;
-  animation: float 6s ease-in-out infinite;
-}
-
-.bgCloud {
-  top: 4rem;
-  right: 1rem;
-  animation: float 7s ease-in-out infinite;
-}
-
-.bgQR {
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-8px) scale(1.02);
-  }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: #ffffffcc;
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  width: 100%;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .heading {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
   text-align: center;
-  margin-bottom: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .highlight {
-  color: var(--primary-color);
+  background: linear-gradient(to right, #00eaff, #00c3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  margin-top: 1rem;
 }
 
 .paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
   margin-bottom: 2rem;
 }
 
 .subheading {
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 2rem 0 1rem;
-  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
 }
 
 .featureList {
-  text-align: left;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.featureList li {
+  margin: 0.7rem 0;
   padding-left: 1.5rem;
-  margin: 1rem 0 2rem;
-  list-style-type: disc;
+  position: relative;
+  color: #f0f0f0;
+}
+
+.featureList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00eaff;
+  font-weight: bold;
 }
 
 .featureLabel {
   font-weight: 600;
-  color: #000;
+  color: #ffffff;
 }
 
 .buttonGroup {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2rem;
+  justify-content: center;
 }
 
 .uploadButton,
 .downloadButton {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.9rem 1.5rem;
-  text-align: center;
+  background: #00c6ff;
+  padding: 0.9rem 1.8rem;
   border-radius: 10px;
-  font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.downloadButton {
-  background-color: #1f2937;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 198, 255, 0.3);
 }
 
 .uploadButton:hover,
 .downloadButton:hover {
-  transform: translateY(-2px);
-  background-color: #1d4ed8;
+  background: #0072ff;
+  transform: translateY(-2px) scale(1.05);
 }
 
-/* RESPONSIVE STYLES */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 640px) {
   .heading {
-    font-size: 2rem;
-  }
-
-  .subheading {
-    font-size: 1.4rem;
-  }
-
-  .card {
-    font-size: 1rem;
-  }
-
-  .container {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .heading {
-    font-size: 1.6rem;
-  }
-
-  .subheading {
-    font-size: 1.2rem;
-  }
-
-  .card {
-    font-size: 0.95rem;
-  }
-
-  .featureList {
-    font-size: 0.95rem;
-  }
-
-  .buttonGroup {
-    flex-direction: column;
-    gap: 0.75rem;
+    font-size: 2.2rem;
   }
 
   .uploadButton,
   .downloadButton {
-    font-size: 0.95rem;
-    padding: 0.8rem 1.2rem;
+    width: 100%;
+    text-align: center;
   }
 }
