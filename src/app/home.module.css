@@ -1,0 +1,100 @@
+.main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ffffff, #f0f8ff, #ffffff);
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #008edc;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: #222;
+}
+
+.card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #555;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: #222;
+}
+
+.featureList {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  line-height: 1.8;
+  color: #444;
+}
+
+.featureLabel {
+  font-weight: 600;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .buttonGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.uploadButton,
+.downloadButton {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.uploadButton {
+  background-color: #0070f3;
+}
+
+.uploadButton:hover {
+  background-color: #0059c1;
+}
+
+.downloadButton {
+  background-color: #10b981;
+}
+
+.downloadButton:hover {
+  background-color: #059669;
+}
