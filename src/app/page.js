@@ -5,29 +5,8 @@ import styles from './home.module.css';
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* Decorative Images */}
-      <img
-        src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213743/uploads/vvvdgte4rhkwzoo5z6hr.png"
-        alt="Laptop"
-        className={`${styles.backgroundImage} ${styles.bgLaptop}`}
-        width={120}
-        height={120}
-      />
-      <img
-        src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213809/uploads/uedw5fxiqtw6q7fotlrg.png"
-        alt="Cloud"
-        className={`${styles.backgroundImage} ${styles.bgCloud}`}
-        width={100}
-        height={100}
-      />
-      <img
-        src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213867/uploads/r4bdbnkx8tfsk312vbg3.png"
-        alt="QR Code"
-        className={`${styles.backgroundImage} ${styles.bgQR}`}
-        width={80}
-        height={80}
-      />
-
+     
+     
       <div className={styles.container}>
         <h1 className={styles.heading}>
           Welcome to <span className={styles.highlight}>Droplin</span>
