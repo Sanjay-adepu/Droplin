@@ -6,9 +6,27 @@ export default function Home() {
   return (
     <main className={styles.main}>
       {/* Decorative Images */}
-      <Image src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213743/uploads/vvvdgte4rhkwzoo5z6hr.png" alt="Laptop" className={`${styles.backgroundImage} ${styles.bgLaptop}`} width={120} height={120} />
-      <Image src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213809/uploads/uedw5fxiqtw6q7fotlrg.png" alt="Cloud" className={`${styles.backgroundImage} ${styles.bgCloud}`} width={100} height={100} />
-      <Image src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213867/uploads/r4bdbnkx8tfsk312vbg3.png" alt="QR Code" className={`${styles.backgroundImage} ${styles.bgQR}`} width={80} height={80} />
+      <Image
+        src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213743/uploads/vvvdgte4rhkwzoo5z6hr.png"
+        alt="Laptop"
+        className={`${styles.backgroundImage} ${styles.bgLaptop}`}
+        width={120}
+        height={120}
+      />
+      <Image
+        src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213809/uploads/uedw5fxiqtw6q7fotlrg.png"
+        alt="Cloud"
+        className={`${styles.backgroundImage} ${styles.bgCloud}`}
+        width={100}
+        height={100}
+      />
+      <Image
+        src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213867/uploads/r4bdbnkx8tfsk312vbg3.png"
+        alt="QR Code"
+        className={`${styles.backgroundImage} ${styles.bgQR}`}
+        width={80}
+        height={80}
+      />
 
       <div className={styles.container}>
         <h1 className={styles.heading}>
@@ -18,7 +36,7 @@ export default function Home() {
         <section className={styles.card}>
           <p className={styles.paragraph}>
             <strong>Droplin</strong> is a smart file-sharing platform built to seamlessly transfer files, text, and links between devices like laptops and mobiles.
-            Whether you're in a classroom, office, or working remotely, Droplin makes it effortless to upload and retrieve data using a unique code or QR scanner.
+            Whether you&rsquo;re in a classroom, office, or working remotely, Droplin makes it effortless to upload and retrieve data using a unique code or QR scanner.
           </p>
 
           <h2 className={styles.subheading}>✨ Key Features</h2>
