@@ -1,26 +1,26 @@
 import Link from 'next/link';
 import styles from './home.module.css';
-import Image from 'next/image';
+
 
 export default function Home() {
   return (
     <main className={styles.main}>
       {/* Decorative Images */}
-      <Image
+      <img
         src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213743/uploads/vvvdgte4rhkwzoo5z6hr.png"
         alt="Laptop"
         className={`${styles.backgroundImage} ${styles.bgLaptop}`}
         width={120}
         height={120}
       />
-      <Image
+      <img
         src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213809/uploads/uedw5fxiqtw6q7fotlrg.png"
         alt="Cloud"
         className={`${styles.backgroundImage} ${styles.bgCloud}`}
         width={100}
         height={100}
       />
-      <Image
+      <img
         src="https://res.cloudinary.com/dppiuypop/image/upload/v1751213867/uploads/r4bdbnkx8tfsk312vbg3.png"
         alt="QR Code"
         className={`${styles.backgroundImage} ${styles.bgQR}`}
