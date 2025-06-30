@@ -11,9 +11,10 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  background: linear-gradient(135deg, #f6f9fc, #e9eff5);
   background-size: 200% 200%;
   animation: fadeBackground 10s ease infinite;
+  color: #1e1e2f;
 }
 
 /* Background animation */
@@ -29,7 +30,7 @@ body {
   }
 }
 
-/* Main container wrapper */
+/* Main wrapper */
 .main {
   min-height: 100vh;
   padding: 2rem;
@@ -38,60 +39,51 @@ body {
   align-items: flex-start;
 }
 
-/* Card container - MOBILE-FIRST */
+/* Card Container */
 .container {
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  color: #333;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Desktop-only enhancements */
-@media (min-width: 768px) {
-  .container {
-    max-width: 900px;
-    width: 100%;
-    padding: 3rem 2rem;
-  }
-}
-
-/* Headings and text */
+/* Headings */
 .heading {
   font-size: 2.4rem;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1e1e1e;
+  margin-bottom: 1.5rem;
+  color: #222;
 }
 
 .highlight {
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.paragraph {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
 .subheading {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #333;
+  color: #2c2c2c;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
 }
 
-/* Features list */
+/* Paragraph */
+.paragraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+/* Feature List */
 .featureList {
   list-style: none;
   padding-left: 0;
@@ -100,10 +92,10 @@ body {
 
 .featureList li {
   margin: 0.75rem 0;
-  padding-left: 1.5rem;
+  padding-left: 1.6rem;
   position: relative;
-  color: #444;
   font-size: 1.05rem;
+  color: #333;
 }
 
 .featureList li::before {
@@ -112,7 +104,7 @@ body {
   left: 0;
   top: 2px;
   font-size: 1.1rem;
-  color: #7f5af0;
+  color: #6a11cb;
 }
 
 .featureLabel {
@@ -131,29 +123,34 @@ body {
 
 .uploadButton,
 .downloadButton {
-  background: linear-gradient(to right, #7f5af0, #64b5f6);
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
-  padding: 0.8rem 1.6rem;
-  border-radius: 8px;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(127, 90, 240, 0.3);
+  box-shadow: 0 6px 18px rgba(106, 17, 203, 0.3);
   cursor: pointer;
   width: 100%;
   text-align: center;
   font-size: 1rem;
 }
 
-/* Hover effects */
 .uploadButton:hover,
 .downloadButton:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(127, 90, 240, 0.4);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
 }
 
-/* Responsive button layout on desktop */
+/* Tablet/Desktop Enhancements */
 @media (min-width: 768px) {
+  .container {
+    max-width: 900px;
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+
   .uploadButton,
   .downloadButton {
     width: auto;
@@ -162,5 +159,35 @@ body {
 
   .buttonGroup {
     flex-direction: row;
+  }
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .uploadButton,
+  .downloadButton {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.3rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
   }
 }
