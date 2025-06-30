@@ -117,35 +117,25 @@
   box-shadow: 0 6px 16px rgba(127, 90, 240, 0.4);
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 90% !important;
+    max-width: 100%;
+    margin: 0 auto;
     padding: 2rem 1.5rem;
   }
 
   .heading {
     font-size: 1.8rem;
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #1e1e1e;
   }
 
   .paragraph {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
-    color: #555;
   }
 
   .subheading {
     font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: #333;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.4rem;
   }
 
   .featureList li {
@@ -159,9 +149,7 @@
   .uploadButton,
   .downloadButton {
     width: 100%;
-    text-align: center;
     font-size: 1rem;
-    padding: 0.75rem 1rem;
   }
 
   .buttonGroup {
