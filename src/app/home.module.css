@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+
+
+/* Main Container */
 .main {
   min-height: 100vh;
   padding: 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #fdfbfb, #ebedee);
   background-size: 200% 200%;
   animation: fadeBackground 10s ease infinite;
 }
 
+/* Background Animation */
 @keyframes fadeBackground {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* Card Container */
 .container {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(15px);
@@ -30,6 +35,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Heading Styles */
 .heading {
   font-size: 2.8rem;
   text-align: center;
@@ -44,10 +50,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.card {
-  margin-top: 1rem;
-}
-
+/* Paragraph and Text */
 .paragraph {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -64,6 +67,7 @@
   padding-bottom: 0.5rem;
 }
 
+/* Feature List */
 .featureList {
   list-style: none;
   padding-left: 0;
@@ -92,6 +96,7 @@
   color: #2b2b2b;
 }
 
+/* Buttons */
 .buttonGroup {
   display: flex;
   flex-wrap: wrap;
@@ -109,6 +114,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(127, 90, 240, 0.3);
+  cursor: pointer;
 }
 
 .uploadButton:hover,
@@ -117,12 +123,12 @@
   box-shadow: 0 6px 16px rgba(127, 90, 240, 0.4);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    width: 90% !important;
-    max-width: 100%;
+    width: 90%;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.2rem;
   }
 
   .heading {
@@ -150,6 +156,7 @@
   .downloadButton {
     width: 100%;
     font-size: 1rem;
+    padding: 0.75rem 1rem;
   }
 
   .buttonGroup {
