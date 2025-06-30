@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
        
+:root {
+  --primary-color: #7f5af0;
+  --text-color: #2b2b2b;
+  --hover-bg: #f2f2f2;
+}
