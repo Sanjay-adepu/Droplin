@@ -40,7 +40,7 @@ body {
 
 /* Card container - MOBILE-FIRST */
 .container {
-  width: 90%;
+  width: 96%;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   background: rgba(255, 255, 255, 0.7);
