@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import './Upload.css';
+import './upload.module.css';
 import Navbar from '../Navbar/Navbar.jsx';
 import { createClient } from '@supabase/supabase-js';
 
