@@ -11,7 +11,7 @@
 }
 
 .container {
-  min-width: 350px;
+  min-width: 320px;
   width: 100%;
   background: var(--card-bg);
   padding: 2.5rem 2rem;
