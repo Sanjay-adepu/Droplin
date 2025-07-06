@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link href="/" className={styles["navbar-logo"]}>
           <div className={styles["logo-wrapper"]}>
             <Image
-              src="/file_0000000092fc61f8b1dcef3bcbda5a3c.jpg"
+              src="https://res.cloudinary.com/dppiuypop/image/upload/v1751811813/uploads/et7pkkv6b3uiuxwoywza.jpg"
               alt="Droplin Logo"
               width={40}
               height={40}
