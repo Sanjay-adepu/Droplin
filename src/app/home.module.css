@@ -11,7 +11,7 @@
 }
 
 .container {
-  min-width: 300px;
+  min-width: 350px;
   width: 100%;
   background: var(--card-bg);
   padding: 2.5rem 2rem;
@@ -34,7 +34,7 @@
 }
 
 .paragraph {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   line-height: 1.8;
   color: var(--subtext);
   margin-bottom: 2rem;
@@ -42,8 +42,8 @@
 }
 
 .subheading {
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.83rem;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: var(--text);
 }
@@ -56,15 +56,16 @@
 
 .featureList li {
   margin-bottom: 1rem;
-  font-size: 0.56rem;
+  font-size: 0.6rem;
   line-height: 1.6;
   color: var(--subtext);
   display: flex;
+flex-direction:column;
   align-items: flex-start;
 }
 
 .featureLabel {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
   margin-right: 0.4rem;
 }
