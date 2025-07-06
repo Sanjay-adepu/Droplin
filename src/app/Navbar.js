@@ -20,7 +20,7 @@ const Navbar = () => {
               width={40}
               height={40}
               className={styles["logo-img"]}
-            />
+            /><span>Droplin</span>
             
           </div>
         </Link>
