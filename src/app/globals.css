@@ -10,6 +10,17 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --primary: #4f46e5; /* Indigo */
+  --text: #111827;
+  --subtext: #4b5563;
+  --background: #f9fafb;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
 
 body {
   font-family: 'Inter', sans-serif;
