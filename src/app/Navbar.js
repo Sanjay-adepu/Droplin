@@ -28,7 +28,7 @@ const Navbar = () => {
         {/* Desktop Nav Links */}
         <ul className={styles["nav-links-desktop"]}>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/Upload">Upload</Link></li>
+          <li><Link href="/upload">Upload</Link></li>
           <li><Link href="/download">Download</Link></li>
         </ul>
 
@@ -47,7 +47,7 @@ const Navbar = () => {
       <div className={`${styles.sidebar} ${isMenuOpen ? styles.open : ""}`}>
         <ul className={styles["nav-links"]}>
           <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-          <li><Link href="/Upload" onClick={() => setIsMenuOpen(false)}>Upload</Link></li>
+          <li><Link href="/upload" onClick={() => setIsMenuOpen(false)}>Upload</Link></li>
           <li><Link href="/download" onClick={() => setIsMenuOpen(false)}>Download</Link></li>
         </ul>
       </div>
