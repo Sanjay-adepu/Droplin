@@ -82,9 +82,8 @@ const UploadInterface = () => {
 <Navbar/>
     <div className={styles.uploadContainer}>
       <div className={styles.instructions}>
-      <h3 className={styles.new}>
-  How to upload
-</h3>
+      <h3 className={styles.heading}>How to upload</h3>
+  
 
 
         <p>
