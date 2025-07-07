@@ -82,14 +82,7 @@ const UploadInterface = () => {
 <Navbar/>
     <div className={styles.uploadContainer}>
       <div className={styles.instructions}>
-      <h3 style={{ 
-  fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', 
-  fontSize: '24px', 
-  fontWeight: '600', 
-  color: '#111827', 
-  marginBottom: '16px', 
-  letterSpacing: '0.4px' 
-}}>
+      <h3 className={styles.new}>
   How to upload
 </h3>
 
