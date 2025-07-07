@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import styles from './upload.module.css'; // ✅ Correct import for CSS Module
-
+import Navbar from '../Navbar.js';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -78,6 +78,8 @@ const UploadInterface = () => {
   };
 
   return (
+<>
+<Navbar/>
     <div className={styles.uploadContainer}>
       <div className={styles.instructions}>
         <h2>How to Upload</h2>
@@ -185,6 +187,7 @@ const UploadInterface = () => {
         </div>
       )}
     </div>
+</>
   );
 };
 
