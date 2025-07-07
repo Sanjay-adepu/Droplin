@@ -82,7 +82,7 @@ const UploadInterface = () => {
 <Navbar/>
     <div className={styles.uploadContainer}>
       <div className={styles.instructions}>
-        <h2>How to Upload</h2>
+       
         <p>
           1. Select the type of data you want to upload: <strong>Files</strong>, <strong>Text</strong>, or <strong>Link</strong>.<br />
           2. Based on your selection, provide the required input and click <strong>Submit</strong>.
