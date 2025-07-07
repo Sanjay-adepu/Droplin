@@ -1,13 +1,12 @@
 "use client";
 import React, { useState } from 'react';
-import './upload.module.css';
- 
+import styles from './upload.module.css'; // ✅ Correct import for CSS Module
+
 import { createClient } from '@supabase/supabase-js';
 
-// ✅ Supabase credentials
 const supabase = createClient(
   'https://ahqwlfgoxmepucldmpyc.supabase.co',
-  'your-public-anon-key-here' // Move this to an env variable for security!
+  'your-public-anon-key-here'
 );
 
 const UploadInterface = () => {
@@ -79,119 +78,113 @@ const UploadInterface = () => {
   };
 
   return (
-    <>
-     
-      <div className="upload-container">
-                <div className="instructions">
-          <h2>How to Upload</h2>
-          <p>
-            1. Select the type of data you want to upload: <strong>Files</strong>, <strong>Text</strong>, or <strong>Link</strong>.<br />
-            2. Based on your selection, provide the required input and click <strong>Submit</strong>.
-          </p>
-          <p className="file-info">
-            <strong>File Upload Info:</strong><br />
-            - You can select <strong>multiple files</strong> or an entire <strong>folder</strong>.<br />
-            - Supported types: <strong>Images, PDFs, PPTs, Word Docs, MP3s, MP4s, APKs</strong>, and more.
-          </p>
-          <hr />
-        </div>
+    <div className={styles.uploadContainer}>
+      <div className={styles.instructions}>
+        <h2>How to Upload</h2>
+        <p>
+          1. Select the type of data you want to upload: <strong>Files</strong>, <strong>Text</strong>, or <strong>Link</strong>.<br />
+          2. Based on your selection, provide the required input and click <strong>Submit</strong>.
+        </p>
+        <p className={styles.fileInfo}>
+          <strong>File Upload Info:</strong><br />
+          - You can select <strong>multiple files</strong> or an entire <strong>folder</strong>.<br />
+          - Supported types: <strong>Images, PDFs, PPTs, Word Docs, MP3s, MP4s, APKs</strong>, and more.
+        </p>
+        <hr />
+      </div>
 
-        <div className="option-container">
-          {['files', 'text', 'link'].map((type) => (
-            <button
-              key={type}
-              onClick={() => setSelectedType(type)}
-              className={`option-btn ${selectedType === type ? 'active' : ''}`}
-            >
-              {type.charAt(0).toUpperCase() + type.slice(1)}
-            </button>
-          ))}
-        </div>
+      <div className={styles.optionContainer}>
+        {['files', 'text', 'link'].map((type) => (
+          <button
+            key={type}
+            onClick={() => setSelectedType(type)}
+            className={`${styles.optionBtn} ${selectedType === type ? styles.active : ''}`}
+          >
+            {type.charAt(0).toUpperCase() + type.slice(1)}
+          </button>
+        ))}
+      </div>
 
-        <div className="dynamic-field">
-          {selectedType === 'files' && (
-            <div className="file-upload-mode">
-              <div className="toggle-mode">
-                <label>
-                  <input
-                    type="radio"
-                    value="files"
-                    checked={fileInputMode === 'files'}
-                    onChange={() => setFileInputMode('files')}
-                  />
-                  Select Files
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="folder"
-                    checked={fileInputMode === 'folder'}
-                    onChange={() => setFileInputMode('folder')}
-                  />
-                  Select Folder
-                </label>
-              </div>
-
-              <input
-                type="file"
-                multiple
-                {...(fileInputMode === 'folder' ? { webkitdirectory: 'true', directory: '' } : {})}
-                onChange={(e) => setFiles(Array.from(e.target.files))}
-                className="input-field"
-              />
+      <div className={styles.dynamicField}>
+        {selectedType === 'files' && (
+          <div className={styles.fileUploadMode}>
+            <div className={styles.toggleMode}>
+              <label>
+                <input
+                  type="radio"
+                  value="files"
+                  checked={fileInputMode === 'files'}
+                  onChange={() => setFileInputMode('files')}
+                />
+                Select Files
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="folder"
+                  checked={fileInputMode === 'folder'}
+                  onChange={() => setFileInputMode('folder')}
+                />
+                Select Folder
+              </label>
             </div>
-          )}
 
-          {selectedType === 'text' && (
-            <textarea
-              rows="4"
-              placeholder="Enter your message..."
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              className="textarea-field"
-            />
-          )}
-
-          {selectedType === 'link' && (
             <input
-              type="url"
-              placeholder="Paste your link..."
-              value={link}
-              onChange={(e) => setLink(e.target.value)}
-              className="input-field"
+              type="file"
+              multiple
+              {...(fileInputMode === 'folder' ? { webkitdirectory: 'true', directory: '' } : {})}
+              onChange={(e) => setFiles(Array.from(e.target.files))}
+              className={styles.inputField}
             />
-          )}
-        </div>
-
-        <button onClick={handleSubmit} className="submit-btn">
-          Submit
-        </button>
-
-        {code && (
-          <div className="result-container">
-            <h3>Generated Code:</h3>
-            <p>{code}</p>
-            <a
-              href={`https://airbridge-backend.vercel.app/download/${code}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="download-link"
-            >
-              Download Files
-            </a>
-            {qrImage && (
-              <div className="qr-preview">
-                <h4>QR Code:</h4>
-                <img src={qrImage} alt="QR Code" />
-              </div>
-            )}
           </div>
         )}
+
+        {selectedType === 'text' && (
+          <textarea
+            rows="4"
+            placeholder="Enter your message..."
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            className={styles.textareaField}
+          />
+        )}
+
+        {selectedType === 'link' && (
+          <input
+            type="url"
+            placeholder="Paste your link..."
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            className={styles.inputField}
+          />
+        )}
       </div>
-    
-                                                                         
-    
-    </>
+
+      <button onClick={handleSubmit} className={styles.submitBtn}>
+        Submit
+      </button>
+
+      {code && (
+        <div className={styles.resultContainer}>
+          <h3>Generated Code:</h3>
+          <p>{code}</p>
+          <a
+            href={`https://airbridge-backend.vercel.app/download/${code}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.downloadLink}
+          >
+            Download Files
+          </a>
+          {qrImage && (
+            <div className={styles.qrPreview}>
+              <h4>QR Code:</h4>
+              <img src={qrImage} alt="QR Code" />
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 };
 
