@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import './upload.module.css';
-import Navbar from '../Navbar/Navbar.jsx';
+
 import { createClient } from '@supabase/supabase-js';
 
 // ✅ Supabase credentials
