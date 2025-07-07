@@ -82,9 +82,18 @@ const UploadInterface = () => {
 <Navbar/>
     <div className={styles.uploadContainer}>
       <div className={styles.instructions}>
-       <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#111827', marginBottom: '1rem' }}>
+      <h3 style={{ 
+  fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', 
+  fontSize: '24px', 
+  fontWeight: '600', 
+  color: '#111827', 
+  marginBottom: '16px', 
+  letterSpacing: '0.4px' 
+}}>
   How to upload
 </h3>
+
+
         <p>
           1. Select the type of data you want to upload: <strong>Files</strong>, <strong>Text</strong>, or <strong>Link</strong>.<br />
           2. Based on your selection, provide the required input and click <strong>Submit</strong>.
