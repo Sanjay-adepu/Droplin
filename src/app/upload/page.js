@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import './upload.module.css';
-
+ 
 import { createClient } from '@supabase/supabase-js';
 
 // ✅ Supabase credentials
