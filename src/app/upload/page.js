@@ -80,7 +80,7 @@ const UploadInterface = () => {
 
   return (
     <>
-      <Navbar />
+     
       <div className="upload-container">
                 <div className="instructions">
           <h2>How to Upload</h2>
