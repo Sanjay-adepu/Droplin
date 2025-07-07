@@ -17,6 +17,15 @@
   font-weight: 600;
   color: #111827;
 }
+.new{
+font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+}
 
 .instructions p {
   color: #4b5563;
