@@ -1,3 +1,4 @@
+/* Navbar container */
 .navbar {
   width: 100%;
   background-color: white;
@@ -17,6 +18,7 @@
   align-items: center;
 }
 
+/* Logo styles */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -29,10 +31,27 @@
 }
 
 .logo-img {
-  border-radius: 3px;
-
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
+/* Brand name (Droplin) styling */
+.logo-wrapper span {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #111;
+  letter-spacing: 0.5px;
+  user-select: none;
+}
+
+.logo-wrapper span:hover {
+  color: #555;
+  cursor: pointer;
+}
+
+/* Desktop nav links */
 .nav-links-desktop {
   display: flex;
   gap: 2rem;
@@ -68,40 +87,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Sidebar for mobile */
-.sidebar {
-  position: fixed;
-  top: 64px;
-  right: -100%;
-  width: 100%;
-  background-color: white;
-  border-top: 1px solid #e5e5e5;
-  transition: right 0.3s ease-in-out;
-}
-
-.sidebar.open {
-  right: 0;
-}
-
-.nav-links {
-  list-style: none;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-align-items:center;
-  gap: 1rem;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #111;
-  font-size: 18px;
-}
-.nav-links li a:active{
-color:indigo;
-}
-
-/* Hamburger Open Animation */
+/* Hamburger open animation */
 .hamburger-menu.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(4px, 4px);
 }
@@ -114,7 +100,42 @@ color:indigo;
   transform: rotate(-45deg) translate(4px, -4px);
 }
 
-/* Responsive */
+/* Sidebar (mobile menu) */
+.sidebar {
+  position: fixed;
+  top: 64px;
+  right: -100%;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #e5e5e5;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-size: 18px;
+}
+
+.nav-links li a:active {
+  color: indigo;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
   .nav-links-desktop {
     display: none;
