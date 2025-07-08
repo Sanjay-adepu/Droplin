@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './home.module.css';
 import Navbar from './Navbar.js';
-import footer from './footer.js';
+import Footer from './footer.js';
 export default function Home() {
   return (
 <>
@@ -43,7 +43,7 @@ export default function Home() {
         </section>
       </div>
     </main>
-<footer/>
+<Footer/>
 </>
   );
 }
