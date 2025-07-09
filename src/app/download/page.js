@@ -3,7 +3,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Html5QrcodeScanner } from 'html5-qrcode';
-
+import Navbar from '../Navbar.js';
 const Page = () => {
   const [code, setCode] = useState('');
   const [showScanner, setShowScanner] = useState(false);
@@ -40,6 +40,8 @@ const Page = () => {
   }, [showScanner]);
 
   return (
+<>
+<Navbar/>
     <div style={styles.container}>
       <h2 style={styles.title}>Download Your File</h2>
       <p style={styles.description}>
@@ -65,6 +67,7 @@ const Page = () => {
         <div id="reader" style={{ width: '100%', marginTop: '20px' }}></div>
       )}
     </div>
+</>
   );
 };
 
