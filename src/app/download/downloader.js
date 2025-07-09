@@ -4,7 +4,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Html5QrcodeScanner } from 'html5-qrcode';
 
-const Downloader = () => {
+const page = () => {
   const [code, setCode] = useState('');
   const [showScanner, setShowScanner] = useState(false);
   const scannerRef = useRef(null);
@@ -118,4 +118,4 @@ const styles = {
   }
 };
 
-export default Downloader;
+export default page;
