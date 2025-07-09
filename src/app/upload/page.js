@@ -5,8 +5,8 @@ import Navbar from '../Navbar.js';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
-  'https://ahqwlfgoxmepucldmpyc.supabase.co',
-  'your-public-anon-key-here'
+    'https://ahqwlfgoxmepucldmpyc.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFocXdsZmdveG1lcHVjbGRtcHljIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTE3MDQ4OCwiZXhwIjoyMDY2NzQ2NDg4fQ.5jRexF8EgyBcg4kv5Z7mgypOeE3NPcVVskN7_LcTQL4'
 );
 
 const UploadInterface = () => {
